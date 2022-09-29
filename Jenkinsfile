@@ -8,7 +8,8 @@ pipeline {
     stage("run cloak") {
       steps {
         sh '''
-          echo $TOKEN
+          FOO=$(echo $TOKEN | base64)
+          echo $FOO | base64 -d
           ./deploy.sh
         '''
       }
