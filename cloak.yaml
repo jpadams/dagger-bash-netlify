@@ -11,7 +11,7 @@ dependencies:
   - git:
       remote: https://github.com/dagger/dagger.git
       ref: cloak
-      path: examples/netlify/ts/cloak.yaml
+      path: examples/netlify/go/cloak.yaml
   - git:
       remote: https://github.com/dagger/todoapp.git
       ref: cloak
