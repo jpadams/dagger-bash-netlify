@@ -5,10 +5,18 @@ pipeline {
     TOKEN = credentials('netlify-token')
   }
   stages {
-    stage("run cloak") {
+    stage("prep") {
       steps {
         sh '''
-          TOKEN=$TOKEN ./deploy.sh
+          eval "$(ssh-agent -s)"
+        '''
+      }
+    }
+
+    stage("run Dagger") {
+      steps {
+        sh '''
+          ./deploy.sh
         '''
       }
     }
