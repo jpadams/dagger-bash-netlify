@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 BUILD=$(cloak -p ./cloak.yaml do<<EOF
 query Build {
   core {
