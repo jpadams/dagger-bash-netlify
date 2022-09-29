@@ -7,7 +7,7 @@ query Deploy($token: SecretID!) {
       yarn(runArgs: "build") {
         netlifyDeploy(
           subdir: "build"
-          siteName: "jeremy-new"
+          siteName: "jeremy-noo"
           token: $token) {
             url
          }
