@@ -9,7 +9,7 @@ pipeline {
       steps {
         sh '''
           eval "$(ssh-agent -s)"
-          TOKEN='''+$netlifyToken+''' ./deploy.sh
+          TOKEN='''+netlifyToken+''' ./deploy.sh
         '''
       }
     }
