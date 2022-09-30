@@ -2,13 +2,15 @@ pipeline {
   agent { label 'cloak' }
   
   environment {
-    TOKEN = credentials('netlify-foo')
+    TOKEN = credentials('netlify-token')
   }
   stages {
     stage("run Dagger") {
       steps {
         sh '''
           eval "$(ssh-agent -s)"
+          pwd
+          ls -alr
           ./deploy.sh
         '''
       }
