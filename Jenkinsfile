@@ -8,8 +8,9 @@ pipeline {
     stage("run Dagger") {
       steps {
         sh '''
-          eval "$(ssh-agent -s)"
+
           ./deploy.sh
+
         '''
       }
     }
