@@ -31,6 +31,5 @@ query Deploy($contents: FSID!, $token: SecretID!) {
 }
 EOF
 )
-sleep 10
 URL=$(echo -n $DEPLOY | jq -r '.netlify.deploy.deployURL')
 echo $URL
