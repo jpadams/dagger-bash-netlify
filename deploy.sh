@@ -26,10 +26,12 @@ query Deploy($contents: FSID!, $token: SecretID!) {
       subdir: "build",
     ) {
       deployURL
+      url
+      logsURL
     }
   }
 }
 EOF
 )
-URL=$(echo -n $DEPLOY | jq -r '.netlify.deploy.deployURL')
+URL=$(echo -n $DEPLOY | jq -r '.netlify.deploy.url')
 echo $URL
