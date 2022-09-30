@@ -33,5 +33,6 @@ query Deploy($contents: FSID!, $token: SecretID!) {
 }
 EOF
 )
-URL=$(echo -n $DEPLOY | jq -r '.netlify.deploy.url')
-echo $URL
+#URL=$(echo -n $DEPLOY | jq -r '.netlify.deploy.url')
+#echo $URL
+echo $DEPLOY | jq '.'
