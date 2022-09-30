@@ -2,7 +2,7 @@
 
 set -x
 
-BUILD=$(cloak -p ./cloak.yaml do<<EOF
+BUILD=$(cloak -p ./cloak.yaml do<<'EOF'
 query Build {
   core {
     git(remote: "https://github.com/dagger/todoapp", ref: "cloak") {
@@ -22,7 +22,7 @@ query Deploy($contents: FSID!, $token: SecretID!) {
     deploy(
       contents: $contents,
       token: $token,
-      siteName: "astonishing-stroopwafel-d6bf15",
+      siteName: "djflasdjflkajsdlfasdddddhasdfhskdjhfsssjkshdfk",
       subdir: "build",
     ) {
       deployURL

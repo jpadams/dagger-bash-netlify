@@ -9,8 +9,6 @@ pipeline {
       steps {
         sh '''
           eval "$(ssh-agent -s)"
-          pwd
-          ls -alr
           ./deploy.sh
         '''
       }
