@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+#set -x
 
 BUILD=$(cloak -p ./cloak.yaml do<<'EOF'
 query Build {
