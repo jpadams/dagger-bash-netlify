@@ -22,7 +22,7 @@ query Deploy($contents: FSID!, $token: SecretID!) {
     deploy(
       contents: $contents,
       token: $token,
-      siteName: "jeremy-noo",
+      siteName: "jeremy-foo-stuff",
       subdir: "build",
     ) {
       deployURL
